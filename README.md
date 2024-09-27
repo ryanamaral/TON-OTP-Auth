@@ -1,52 +1,56 @@
-# twa-template
+# TON OTP Auth
 
-> Starter template for a new TWA interacting with the TON blockchain
+TON OTP Auth is a secure and user-friendly Telegram Mini App designed to manage one-time password (OTP) codes for multiple accounts. It leverages the TON blockchain to encrypt and store OTP entries within a custom NFT owned by the user. This decentralized approach ensures that authentication data remains private and tamper-proof, giving users full control over their security.
 
-# Overview
 
-The project is highly-opinionated, and there are many other alternate routes it could have taken. Some examples:
+## Features
 
-- Supports Ton Connect 2 wallets
-- Uses vite with react (alternative to create-react-app)
-- Uses the `ton` npm package
+- **Secure OTP Management**: Add and manage OTP codes for multiple accounts in a single app.
+- **NFT-Based Storage**: OTP data is encrypted and stored on the TON blockchain within a custom NFT, providing decentralized and tamper-proof data storage.
+- **TON Connect 2**: Supports wallets that integrate with the Ton Connect 2 protocol.
+- **React-based App**: Built using React and is TWA-ready, providing smooth Telegram Mini App integration.
+- **Blockchain Integration**: Fully utilizes the TON blockchain for NFT generation and secure OTP storage.
 
-# Prerequesities
 
-- Node.js v16 (other versions may work, needs more testing)
-- A TON Connect compatible wallet (e.g. [Tonkeeper](https://tonkeeper.com/))
+## Tech Stack
 
-# What does this repo contain?
+- **React**: Frontend framework for building the Telegram Web App (TWA).
+- **Vite**: A modern frontend build tool for faster and leaner development (alternative to Create React App).
+- **TON Blockchain**: For NFT generation and decentralized storage of encrypted OTP data.
+- **Ton Connect 2**: Integration with wallets supporting the Ton Connect 2 protocol for smooth user interactions.
+- **`ton` npm package**: Used for interacting with the TON blockchain.
 
-- A react-based TWA-ready app, interacting with TON
-- Github actions set to deploy app to github pages
-- A script to connect a telegram bot to the deployed app
 
-# How to use
+## How It Works
 
-1. Create a template from this repo with the "Use this template" button
+1. **Set Up**: Users will open the _TON OTP Auth_ app within Telegram.
+2. **Add Accounts**: Various accounts (e.g., Google, GitHub) can be added to the app.
+3. **NFT Creation**: A custom NFT is generated on the TON blockchain to securely store the encrypted OTP data.
+4. **Accessing OTPs**: Users can view and copy their OTP codes directly within the Telegram Mini App.
+5. **Security**: All OTP entries are stored in an encrypted format within the NFT, ensuring privacy and security.
 
-   1. Choose a name for your repo
-   2. `**IMPORTANT!!**` mark "Include all branches", otherwise github pages deployment will not work.
-      ![image](https://user-images.githubusercontent.com/5641469/191731317-14e742fd-accb-47d4-a794-fad01148a377.png)
+## Prerequisites
+- [Telegram](https://telegram.org/) installed on your device
+- A TON wallet to manage NFTs (e.g. [Tonkeeper](https://tonkeeper.com/))
 
-2. Clone this repo and run `yarn`
+## Roadmap
 
-3. Create a new bot with [botfather](https://t.me/botfather)
-   1. Type `/newbot`
-   2. Choose a name for your bot, e.g. `My Ton TWA`
-   3. Choose a username for your bot, e.g. `my_ton_twa_482765_bot`
-   4. Take note of the access token, e.g. `5712441624:AAHmiHvwrrju1F3h29rlVOZLRLnv-B8ZZZ`
-   5. Run `yarn configbot` to link your bot to the webapp
+- [ ] **MVP Release**: Initial app with basic OTP management and NFT storage.
+- [ ] **Ton Connect 2 Integration**: Full support for wallet interactions using Ton Connect 2 protocol.
+- [ ] **UI/UX Enhancements**: Improve user experience and add intuitive features for managing multiple OTP accounts.
+- [ ] **Additional Features**: Advanced encryption options.
 
-# Development
 
-1. Run `npm run dev` and edit the code as needed
-2. On push to the `main` branch, the app will be automatically deployed via github actions.
+## Contributing
 
-# Roadmap
+Contributions are welcome! Please fork the repository and submit a pull request for any bug fixes, feature additions, or enhancements.
 
-- [ ] Jetton transfer support
+1. Fork the repository.
+2. Create your feature branch: `git checkout -b feature/YourFeature`.
+3. Commit your changes: `git commit -m 'Add YourFeature'`.
+4. Push to the branch: `git push origin feature/YourFeature`.
+5. Submit a pull request.
 
-# License
+## License
 
-MIT
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
